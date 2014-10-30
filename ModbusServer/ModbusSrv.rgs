@@ -1,0 +1,22 @@
+HKCR
+{
+	ModbusSrv.ModbusSrv.1 = s 'ModbusSrv Class'
+	{
+		CLSID = s '{B3DE3CC2-C629-11D1-8FE9-E4CD05C10000}'
+	}
+	ModbusSrv.ModbusSrv = s 'ModbusSrv Class'
+	{
+		CurVer = s 'ModbusSrv.ModbusSrv.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B3DE3CC2-C629-11D1-8FE9-E4CD05C10000} = s 'ModbusSrv Class'
+		{
+			ProgID = s 'ModbusSrv.ModbusSrv.1'
+			VersionIndependentProgID = s 'ModbusSrv.ModbusSrv'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{B3DE3CB5-C629-11D1-8FE9-E4CD05C10000}'
+		}
+	}
+}

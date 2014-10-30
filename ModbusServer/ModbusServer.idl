@@ -1,0 +1,173 @@
+// ModbusServer.idl : IDL source for ModbusServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ModbusServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+import "..\UtilClasses\Include\InterfaceConstants.h";
+
+	[
+		object,
+		uuid(B3DE3CC1-C629-11D1-8FE9-E4CD05C10000),
+		dual,
+		helpstring("IModbusSrv Interface"),
+		pointer_default(unique)
+	]
+
+	interface IModbusSrv : IDispatch
+	{
+		[id(1), helpstring("Close connection with of local com port or remote tcp server")] HRESULT CloseConnection();
+		[propget, id(2), helpstring("Local Serial Comm Port")] HRESULT ComPort([out, retval] short *pVal);
+		[propput, id(2), helpstring("Local Serial Comm Port")] HRESULT ComPort([in] short newVal);
+		[propget, id(3), helpstring(" BaudRate")] HRESULT BaudRate([out, retval] long *pVal);
+		[propput, id(3), helpstring(" BaudRate")] HRESULT BaudRate([in] long newVal);
+		[propget, id(4), helpstring("Parity")] HRESULT Parity([out, retval] short *pVal);
+		[propput, id(4), helpstring("Parity")] HRESULT Parity([in] short newVal);
+		[propget, id(6), helpstring("property FlowControl")] HRESULT FlowControl([out, retval] short *pVal);
+		[propput, id(6), helpstring("property FlowControl")] HRESULT FlowControl([in] short newVal);
+		[id(7), helpstring("Make a connection")] HRESULT Connect([out,retval] VARIANT_BOOL* pbConnected);
+		[id(8), helpstring("method OpenConnection")] HRESULT OpenConnection([in] BSTR Name , [in] short Type , [out,retval]  VARIANT_BOOL* pbOk);
+		[propget, id(9), helpstring("property RaiseError")] HRESULT RaiseError([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(9), helpstring("property RaiseError")] HRESULT RaiseError([in] VARIANT_BOOL newVal);
+		[id(10), helpstring("method PresetSingleRegister")] HRESULT PresetSingleRegister([in] short Addr , [in]  long Register , [in] VARIANT RegValue , [in,optional] VARIANT vRealType , [out,retval]  long*  lRetval);
+		[id(11), helpstring("method ForceSingleCoil")] HRESULT ForceSingleCoil([in] short Addr , [in] long Register , [in] VARIANT_BOOL CoilValue , [out,retval] long* plRetVal);
+		[id(12), helpstring("method ReadOutputRegisters")] HRESULT ReadOutputRegisters([in] short Addr , [in] long DataStart , [in] short Quantity , [in,out] VARIANT* vRegValues , [in,optional] VARIANT vVarType , [in,optional] VARIANT vRealType ,  [out,retval] long* lpRetVal);
+		[id(13), helpstring("method ReadInputRegisters")] HRESULT ReadInputRegisters([in] short Addr , [in] long DataStart , [in] short Quantity , [in,out] VARIANT* vRegValues , [in,optional] VARIANT vVarType , [in,optional] VARIANT vRealType , [out,retval] long* plRetVal);
+		[id(14), helpstring("method ReadOutputStatus")] HRESULT ReadOutputStatus([in] short Addr , [in] long DataStart , [in] short Quantity , [in,out] VARIANT* vCoilValues ,  [out,retval] long* plRetVal);
+		[id(15), helpstring("method ReadInputStatus")] HRESULT ReadInputStatus([in] short Addr , [in] long DataStart , [in] short Quantity , [in,out] VARIANT* vCoilValues , [out,retval] long* plRetVal);
+		[id(16), helpstring("method PresetMultipleRegisters")] HRESULT PresetMultipleRegisters([in] short Addr , [in] long DataStart , [in] short Quantity , [in]  VARIANT vRegValues , [in,optional] VARIANT vRealType ,  [out,retval] long* plRetVal);
+		[id(17), helpstring("method ForceMultipleCoils")] HRESULT ForceMultipleCoils([in] short Addr , [in] long DataStart , [in] short Quantity , [in]  VARIANT vCoilValues ,  [out,retval] long* plRetVal);
+		[propget, id(18), helpstring("property Retries")] HRESULT Retries([out, retval] short *pVal);
+		[propput, id(18), helpstring("property Retries")] HRESULT Retries([in] short newVal);
+		[propget, id(19), helpstring("property IsActive")] HRESULT IsActive([out, retval] VARIANT_BOOL *pVal);
+		[propget, id(20), helpstring("property Host")] HRESULT Host([out, retval] BSTR *pVal);
+		[propput, id(20), helpstring("property Host")] HRESULT Host([in] BSTR newVal);
+		[propget, id(21), helpstring("property TcpPort")] HRESULT TcpPort([out, retval] long *pVal);
+		[propput, id(21), helpstring("property TcpPort")] HRESULT TcpPort([in] long newVal);
+		[id(22), helpstring("method TxRxMessage")] HRESULT TxRxMessage([in]  VARIANT vQuery , [in] short QueryLength , [in,out]  VARIANT* vResponse, [in] short RespLength, [in,out,optional] VARIANT* vNumOfBytesRead , [out,retval] long* plRetVal);
+		[propget, id(23), helpstring("property TcpServer")] HRESULT TcpServer([out, retval] LPDISPATCH *pVal);
+		[id(24), helpstring("method CreateTCPServer")] HRESULT CreateTCPServer([out,retval] LPDISPATCH* pVal);
+		[propget, id(25), helpstring("property SilentInterval")] HRESULT SilentInterval([out, retval] long *pVal);
+		[propput, id(25), helpstring("property SilentInterval")] HRESULT SilentInterval([in] long newVal);
+		[propget, id(26), helpstring("property TimeOut")] HRESULT TimeOut([out, retval] long *pVal);
+		[propput, id(26), helpstring("property TimeOut")] HRESULT TimeOut([in] long newVal);
+		[propget, id(27), helpstring("property StopBits")] HRESULT StopBits([out, retval] short *pVal);
+		[propput, id(27), helpstring("property StopBits")] HRESULT StopBits([in] short newVal);
+		[propget, id(28), helpstring("property TransmissionMode")] HRESULT TransmissionMode([out, retval] short *pVal);
+		[propput, id(28), helpstring("property TransmissionMode")] HRESULT TransmissionMode([in] short newVal);
+		[propget, id(29), helpstring("property ByteSize")] HRESULT ByteSize([out, retval] short *pVal);
+		[propput, id(29), helpstring("property ByteSize")] HRESULT ByteSize([in] short newVal);
+		[id(30), helpstring("method TxRxRawData")] HRESULT TxRxRawData([in]  VARIANT vQuery , [in] short QueryLength , [in,out]  VARIANT* vResponse, [in] short RespLength, [in] long Timeout, [in,out,optional] VARIANT* vNumOfBytesRead , [out,retval] long* plRetVal);
+		[propget, id(31), helpstring("Delay in ms after an error ")] HRESULT Delay([out, retval] long *pVal);
+		[propput, id(31), helpstring("Delay in ms after an error ")] HRESULT Delay([in] long newVal);
+	};
+	[
+		object,
+		uuid(47ADFAE1-D261-11D1-8FE9-6CD504C1BC01),
+		dual,
+		helpstring("ICTCPIPServer Interface"),
+		pointer_default(unique)
+	]
+	interface ICTCPIPServer : IDispatch
+	{
+		[propget, id(1), helpstring("property ServerAddress")] HRESULT ServerAddress([out, retval] BSTR *pVal);
+		[propput, id(1), helpstring("property ServerAddress")] HRESULT ServerAddress([in] BSTR newVal);
+		[propget, id(2), helpstring("property ServerPort")] HRESULT ServerPort([out, retval] long *pVal);
+		[propput, id(2), helpstring("property ServerPort")] HRESULT ServerPort([in] long newVal);
+		[id(3), helpstring("method StartServer")] HRESULT StartServer([out,retval] VARIANT_BOOL* pbOk);
+		[id(4), helpstring("method StopServer")] HRESULT StopServer([out,retval] VARIANT_BOOL* pbOk);
+		[propget, id(5), helpstring("property ServerActive")] HRESULT ServerActive([out, retval] VARIANT_BOOL *pVal);
+		[id(6), helpstring("method GetLocalHostIP")] HRESULT GetLocalHostIP([out,retval] BSTR* pbstrVal);
+	};
+/*	[
+		object,
+		uuid(B6FE0645-DA8D-11D1-8FE9-E4CD05C10000),
+		dual,
+		helpstring("IDComUtil Interface"),
+		pointer_default(unique)
+	]
+	interface IDComUtil : IDispatch
+	{
+		[id(1), helpstring("method CreateRemoteObject")] HRESULT CreateRemoteObject([in] BSTR MachineName , [in] VARIANT_BOOL Dispatch , [out,retval] IUnknown **punk);
+	};
+*/
+
+[
+	uuid(B3DE3CB4-C629-11D1-8FE9-E4CD05C10000),
+	version(1.0),
+	helpstring("ModbusServer 1.0 Type Library")
+]
+library MODBUSSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	typedef [v1_enum] enum {
+
+		mbErrOk = ERR_OK ,
+		mbErrTimeOut = _ERR_TIMEOUT_ , 
+		mbErrInvResp = _ERR_INV_RESP_,
+		mbErrCRC =_ERR_CRC_,
+		mbErrWrPort = _ERR_WR_PORT_,
+		mbErrRdPort = _ERR_RD_PORT_,
+		mbErrNotInit = _ERR_NOT_INT_,
+		mbErrExceptionCode =_ERR_EXCPTION_CODE_,
+		mbErrOffset = ERR_OFFSET,
+		
+		mbErrBufferOverflow = _ERR_BUFFER_OVERFLOW_,
+	    mbErrSocketError = _ERR_SOCKET_ERROR_,
+	    mbErrWriteSockError = _ERR_WR_SOCK_ERROR_,
+		mbErrReadSockError=_ERR_RD_SOCK_ERROR_,
+		mbErrSockNotConnected= _ERR_SOCK_NOT_CONNECTED_ 
+
+			
+	} ErrorConstants;
+
+	typedef enum {
+
+		 mbNOPARITY    =0,
+		 mbODDPARITY   =1,
+		 mbEVENPARITY  =2,
+		 mbMARKPARITY  =3,
+		 mbSPACEPARITY =4,
+
+		 mbONESTOPBIT   =0,
+		 mbONE5STOPBITS =1,
+		 mbTWOSTOPBITS  =2,
+
+		 mbFC_NONE=0,
+		 mbFC_DTRDSR=0x01,
+         mbFC_RTSCTS=0x02,
+         mbFC_XONXOFF=0x04,
+
+		 mbLOCAL=1,
+		 mbREMOTE=2,
+
+		 mbMODE_RTU=0,
+		 mbMODE_ASCII=1,
+
+		 mbREAL_NORMAL=0,
+         mbREAL_REVERSE=1
+
+	} GeneralConstants;
+
+	[
+		uuid(B3DE3CC2-C629-11D1-8FE9-E4CD05C10000),
+		helpstring("ModbusSrv Class")
+	]
+	coclass ModbusSrv
+	{
+		[default] interface IModbusSrv;
+	};
+	[
+		uuid(47ADFAE2-D261-11D1-8FE9-6CD504C1BC01),
+		helpstring("CTCPIPServer Class")
+	]
+	coclass CTCPIPServer
+	{
+		[default] interface ICTCPIPServer;
+	};
+
+};

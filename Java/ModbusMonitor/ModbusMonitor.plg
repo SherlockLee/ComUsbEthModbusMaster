@@ -1,0 +1,23 @@
+--------------------Configuration: ModbusMonitor - Java Virtual Machine Debug--------------------
+Begining build with project "C:\VcProjs\java\ModbusMonitor\ModbusMonitor.dsp", at root.
+Active configuration is Java Virtual Machine Java Project (based on Java Virtual Machine Java Project)
+
+Project's tools are:
+			"Java Compiler" with flags "/g "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "C:\WINDOWS\TEMP\RSP10D0.TMP" with contents <C:\VcProjs\java\ModbusMonitor\FreeModbus\AppletTest\ModbusMonitorDlg.java
+C:\VcProjs\java\ModbusMonitor\FreeModbus\AppletTest\ModbusMonitor.java
+C:\VcProjs\java\ModbusMonitor\FreeModbus\AppletTest\ModbusAplication.java
+C:\VcProjs\java\ModbusMonitor\FreeModbus\AppletTest\DialogLayout.java
+C:\VcProjs\java\ModbusMonitor\FreeModbus\Util\ModbusException.java
+C:\VcProjs\java\ModbusMonitor\FreeModbus\Util\Modbus.java>
+Compiling...
+Microsoft (R) Visual J++ Compiler Version 1.01.7022
+Copyright (C) Microsoft Corp 1996. All rights reserved.
+
+
+
+
+ModbusMonitor - 0 error(s), 0 warning(s)

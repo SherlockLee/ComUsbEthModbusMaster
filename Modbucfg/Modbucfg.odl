@@ -1,0 +1,42 @@
+// Modbucfg.odl : type library source for Modbucfg.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (Modbucfg.tlb).
+/*
+[ uuid(A3BAD4A6-F5AE-11D1-8FE9-6CD504C1BC01), version(1.0) ]
+library Modbucfg
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Primary dispatch interface for CModbucfgDoc
+	
+	[ uuid(A3BAD4A7-F5AE-11D1-8FE9-6CD504C1BC01) ]
+	dispinterface IModbucfg
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CModbucfgDoc)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CModbucfgDoc)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CModbucfgDoc
+	
+	[ uuid(A3BAD4A5-F5AE-11D1-8FE9-6CD504C1BC01) ]
+	coclass Document
+	{
+		[default] dispinterface IModbucfg;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
+*

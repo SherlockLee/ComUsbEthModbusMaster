@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ModbuLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\TEMP\RSP37.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "..\UtilClasses\Include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MAKING_MBU_LIB_" /D "_AFXDLL" /Fp"Release/ModbuLib.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Vcprojs98\UtilClasses\scr\AutoModbus.cpp"
+"D:\Vcprojs98\UtilClasses\scr\blocksock.cpp"
+"D:\Vcprojs98\UtilClasses\scr\ClientArray.cpp"
+"D:\Vcprojs98\UtilClasses\scr\crc16.cpp"
+"D:\Vcprojs98\UtilClasses\scr\LocalModbus.cpp"
+"D:\Vcprojs98\UtilClasses\scr\MMTimer.cpp"
+"D:\Vcprojs98\UtilClasses\scr\modbus.cpp"
+"D:\Vcprojs98\UtilClasses\scr\OleFuncs.cpp"
+"D:\Vcprojs98\UtilClasses\scr\OleSafeArrayEx.cpp"
+"D:\Vcprojs98\UtilClasses\scr\OleVariantEx.cpp"
+"D:\Vcprojs98\UtilClasses\scr\PerformanceCounter.cpp"
+"D:\Vcprojs98\UtilClasses\scr\RemoteClient.cpp"
+"D:\Vcprojs98\UtilClasses\scr\RemoteModbus.cpp"
+"D:\Vcprojs98\UtilClasses\scr\SyncAccess.cpp"
+"D:\Vcprojs98\UtilClasses\scr\TcpServer.cpp"
+"D:\Vcprojs98\UtilClasses\scr\ThinThread.cpp"
+"D:\Vcprojs98\UtilClasses\scr\Trayicon.cpp"
+]
+Creating command line "cl.exe @D:\TEMP\RSP37.tmp" 
+Creating temporary file "D:\TEMP\RSP38.tmp" with contents
+[
+/nologo /out:"ReleaseModbuLib.lib" 
+.\Release\AutoModbus.obj
+.\Release\blocksock.obj
+.\Release\ClientArray.obj
+.\Release\crc16.obj
+.\Release\LocalModbus.obj
+.\Release\MMTimer.obj
+.\Release\modbus.obj
+.\Release\OleFuncs.obj
+.\Release\OleSafeArrayEx.obj
+.\Release\OleVariantEx.obj
+.\Release\PerformanceCounter.obj
+.\Release\RemoteClient.obj
+.\Release\RemoteModbus.obj
+.\Release\SyncAccess.obj
+.\Release\TcpServer.obj
+.\Release\ThinThread.obj
+.\Release\Trayicon.obj
+]
+Creating command line "link.exe -lib @D:\TEMP\RSP38.tmp"
+<h3>Output Window</h3>
+Compiling...
+AutoModbus.cpp
+blocksock.cpp
+ClientArray.cpp
+crc16.cpp
+LocalModbus.cpp
+MMTimer.cpp
+modbus.cpp
+OleFuncs.cpp
+OleSafeArrayEx.cpp
+OleVariantEx.cpp
+PerformanceCounter.cpp
+RemoteClient.cpp
+RemoteModbus.cpp
+SyncAccess.cpp
+TcpServer.cpp
+ThinThread.cpp
+Trayicon.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+ReleaseModbuLib.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

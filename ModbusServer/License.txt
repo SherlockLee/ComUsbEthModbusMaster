@@ -1,0 +1,17 @@
+By using this version of Softwre or Source code you are consenting to be bound
+by agreement to the following:
+
+
+DISCLAIMER
+
+Since the Software is provided free of charge, I´m the Author Ricardo Saat
+shall not be held responsible for any damages arising from the use of the Software. 
+The Software is provided on an AS IS basis, without warranty of any kind, including without
+limitation the warranties of merchantability, fitness for a particular
+purpose and non-infringement. The entire risk as to the quality and
+performance of the Software is borne by you. Should the Software prove
+defective, you and not me , assume the entire cost of any
+service and repair.
+
+There are no security mechanisms implemented in the Software. 
+

@@ -1,0 +1,62 @@
+; Template for master.ddf
+; Copyright 1996, Microsoft Corporation
+; Version 1.00, 16 July 1996
+
+; Leave this setting.
+
+.OPTION EXPLICIT 
+
+;*********************************
+; Insert the name for the file that you will have users download
+; (i.e. the one you will call via the <OBJECT> tag). This can
+; be anything you would like. Make sure to leave the .cab extension.
+;
+.Set CabinetNameTemplate=TrustModbus.cab
+;*********************************
+
+; Leave these settings
+
+.Set DiskDirectoryTemplate=
+.Set Cabinet=on
+.Set Compress=on
+.Set MaxCabinetSize=0
+.Set MaxDiskSize=CDROM
+
+; Since you will want to consider code-signing your cab files,
+; to make downloading safer and to provide you with the advantages
+; coming with code signing, you will want to include the line below.
+; You can comment it out if you choose not to use code-signing; however,
+; if you don't, many people will not download your package.
+; Depending on your certification company, the size of this may get smaller.
+
+.Set ReservePerCabinetSize=6144
+
+; ***********************
+; In this section, you will list your files.
+ 
+; If these files are not located in the local directory, you must
+; provide a full or relative pathname.
+
+; The first file is the name of the first CAB you created with the 
+; ClassPack.ddf template.
+; Its name was set in line 19 of the template, which began
+; .Set CabinetNameTemplate=
+; If you chose to use an uncompressed .ZIP instead, list that here.
+
+freemodbus.cab
+
+; The second file is the name of the .inf you created with the 
+; master.inf template.
+; This is the name you saved the file as and the name you included
+; on the InfFile= line.
+
+TrustModbus.inf
+
+; Any DLL's or other native code you've decided to install should
+; be listed here, one per line.
+
+
+
+; That's all--you're finished!
+
+; ***********************

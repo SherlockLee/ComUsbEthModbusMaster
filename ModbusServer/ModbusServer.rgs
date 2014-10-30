@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{B3DE3CB5-C629-11D1-8FE9-E4CD05C10000} = s 'ModbusServer'
+		'MBServer.EXE'
+		{
+			val AppID = s {B3DE3CB5-C629-11D1-8FE9-E4CD05C10000}
+		}
+	}
+}

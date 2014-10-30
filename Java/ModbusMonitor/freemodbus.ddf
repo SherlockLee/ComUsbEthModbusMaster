@@ -1,0 +1,67 @@
+; Template for ClassPack.ddf
+; Copyright 1996, Microsoft Corporation
+; Version 1.1, 30 July 1996
+
+; This file lists all of the files that you want to place on 
+; a user's machine. It should contain all of your classes organized
+; in the correct directory hierarchy, specified by your package 
+; names.
+
+; Leave this.
+
+.OPTION EXPLICIT 
+
+;*********************************
+; Insert the name for your cab file here. You will need to
+; use this name in both master.ddf and your inf, so remember your
+; choice.
+;
+.Set CabinetNameTemplate=freemodbus.cab
+;*********************************
+
+; Leave these settings.
+
+.Set DiskDirectoryTemplate=
+.Set Cabinet=on
+.Set Compress=on
+.Set MaxCabinetSize=0
+.Set MaxDiskSize=CDROM
+
+; ***********************
+; This is the main section. You will list the names of all
+; of your classes here, with their full virtual pathnames.
+; You also need to specify each destination directory before you
+; list the files in that directory. We highly recommend that you
+; make all of your packages start with a name that should be unique
+; to you, so that you have your own subdirectory on the user's machine
+; and don't have to worry about having your files written over.
+;
+; For example, say that your classes are
+; Vendor.Applet.class
+; Vendor.Content.ContentContainer.class
+; Vendor.Content.ContentHelper.class
+; Vendor.Util.Loader.class
+;
+; Then this file should read (don't forget to change this!)
+
+.Set DestinationDir=FreeModbus\Util
+FreeModbus\Util\Modbus.class
+FreeModbus\Util\ModbusException.class
+
+.Set DestinationDir=FreeModbus\AppletTest
+FreeModbus\AppletTest\DialogLayout.class
+FreeModbus\AppletTest\ModbusMonitorDlg.class
+FreeModbus\AppletTest\ModbusMonitor.class
+
+; Alternatively, if you decide to use a .ZIP file (as explained in the
+; README), you just need to list one file here, without subdirectories.
+; Something like
+
+;vendor.zip
+
+; will be fine. Be sure to make your name unique, so that other vendors
+; won't overwrite it.
+
+; That's all--you're finished!
+
+; ***********************
